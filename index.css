@@ -1,0 +1,65 @@
+h1 {
+  color: white;
+  transition: color 0.5s ease-in-out;
+  font-size: 120px;
+  opacity: 80%;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+* {
+  color: white;
+  font-size: 28px;
+}
+body {
+  font-family: "MuseoModerno";
+  font-weight: 700;
+  text-align: center;
+}
+
+.clicked {
+  color: #123456;
+}
+
+.btn {
+  cursor: pointer;
+}
+.greetings,
+.form {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+image {
+  position: absolute;
+}
+/* #bg {
+  display: none;
+} */
+
+#bg {
+  max-width: 100%;
+  max-height: auto;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid white;
+  color: white;
+}
