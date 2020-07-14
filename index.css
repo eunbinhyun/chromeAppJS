@@ -32,23 +32,18 @@ body {
   display: block;
 }
 
-image {
-  position: absolute;
-}
 /* #bg {
   display: none;
 } */
 
 #bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: auto;
   max-width: 100%;
   max-height: auto;
-  bottom: 0;
-  left: 0;
-  margin: auto;
   overflow: auto;
-  position: fixed;
-  right: 0;
-  top: 0;
   z-index: -1;
 }
 
@@ -58,8 +53,35 @@ button {
 }
 
 input {
-  background: none;
+  background: transparent;
   border: none;
   border-bottom: 3px solid white;
   color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+.li--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.delete__btn {
+  background-color: orange;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+}
+
+.js-clock {
+  margin-top: 50px;
 }

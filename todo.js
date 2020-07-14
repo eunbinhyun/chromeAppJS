@@ -32,12 +32,15 @@ function paintToDo(text) {
   const span = document.createElement("span");
   const newId = toDos.length + 1;
   delBtn.innerText = "🗑";
+  delBtn.classList.add("delete__btn");
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(span);
   li.appendChild(delBtn);
   toDoList.appendChild(li);
   li.id = newId;
+  li.classList.add("li--center");
+
   console.log(text);
   const toDoObj = {
     text: text,
