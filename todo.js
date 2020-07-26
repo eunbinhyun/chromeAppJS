@@ -12,9 +12,10 @@ function filterFn(toDo) {
   return toDo.id === 1; //true인 아이템으로 새 리스트를 만듬.
 }
 function deleteToDo(event) {
-  const btn = event.target;
+  const btn = event.target.parentNode;
   const li = btn.parentNode;
   toDoList.removeChild(li);
+  console.log(li);
   const cleanToDos = toDos.filter(function (toDo) {
     return toDo.id !== parseInt(li.id); //숫자로 바꾼다
   });
@@ -31,7 +32,7 @@ function paintToDo(text) {
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
   const newId = toDos.length + 1;
-  delBtn.innerText = "🗑";
+  delBtn.innerHTML = "<i class='fas fa-trash-alt'></>";
   delBtn.classList.add("delete__btn");
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;

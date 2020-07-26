@@ -1,12 +1,10 @@
 h1 {
-  color: white;
   transition: color 0.5s ease-in-out;
   font-size: 120px;
-  opacity: 80%;
-  text-shadow: 4px 4px 4px #aaa;
 }
 
 * {
+  box-sizing: border-box;
   color: white;
   font-size: 28px;
 }
@@ -48,8 +46,10 @@ body {
 }
 
 button {
-  background: none;
+  outline: none;
+  background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 input {
@@ -57,15 +57,26 @@ input {
   border: none;
   border-bottom: 3px solid white;
   color: white;
+  outline: none;
 }
 
 input::placeholder {
   color: white;
 }
+ul {
+  padding: 0;
+}
 .li--center {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.li--center:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.li--center:hover .delete__btn {
+  display: block;
 }
 
 .container {
@@ -73,8 +84,23 @@ input::placeholder {
   margin: auto;
 }
 
+.contents {
+  padding: 20px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: auto;
+
+  border-radius: 16px;
+  box-shadow: 0px 6px 17px -6px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.contents h4 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 36px;
+}
 .delete__btn {
-  background-color: orange;
+  display: none;
   border-radius: 4px;
   width: 30px;
   height: 30px;
@@ -83,5 +109,9 @@ input::placeholder {
 }
 
 .js-clock {
-  margin-top: 50px;
+  margin-top: 120px;
+}
+
+.js-weather {
+  font-size: 20px;
 }
